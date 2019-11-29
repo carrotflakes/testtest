@@ -15,3 +15,8 @@ jobs:
       run: cargo test --verbose
     - name: Run examples
       run: ./test.sh
+    - name: Upload artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: dist
+        path: test.sh
